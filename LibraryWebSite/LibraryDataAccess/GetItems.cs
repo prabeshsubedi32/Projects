@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace LibraryDataAccess
 {
-    class Items
+    class GetItems
     {
-        public string BooksName { get; set; }
+
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -16,7 +17,20 @@ namespace LibraryWebSite
 
         protected void btnLogIn_Click(object sender, EventArgs e)
         {
-            Response.Redirect("BooksList.aspx");
+            SqlConnection conn = new SqlConnection("Data Source=PRABESH-PC\\SQLEXPRESS;Initial Catalog=LIBRARY;Integrated Security=True");
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("select * from AdminList", conn);
+            SqlDataReader rd = cmd.ExecuteReader();
+            while (rd.Read())
+            {
+                if ((txtUserName.Text == rd.GetString(0)) && (txtPassword.Text == rd.GetString(1)))
+                {
+                    Response.Redirect("BookListControl.aspx");
+                }
+            }
+            txtMessage.Text = "Wrong UserName or Password";
+
+         
         }
     }
 }

@@ -10,7 +10,7 @@ namespace LibraryDataAccess
     {
         public static string getConnection()
         {
-            return "Data Source=PRABESH-PC\\SQLEXPRESS;Initial Catalog=SM;Integrated Security=True";
+            return ("Data Source=PRABESH-PC\\SQLEXPRESS;Initial Catalog=SM;Integrated Security=True");
         }
 
     }

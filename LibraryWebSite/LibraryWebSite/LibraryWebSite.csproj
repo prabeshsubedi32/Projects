@@ -76,6 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminPage.aspx" />
+    <Content Include="BookListControl.aspx" />
     <Content Include="BooksList.aspx" />
     <Content Include="Global.asax" />
     <Content Include="HomePage.aspx" />
@@ -88,6 +89,13 @@
     </Compile>
     <Compile Include="AdminPage.aspx.designer.cs">
       <DependentUpon>AdminPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BookListControl.aspx.cs">
+      <DependentUpon>BookListControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BookListControl.aspx.designer.cs">
+      <DependentUpon>BookListControl.aspx</DependentUpon>
     </Compile>
     <Compile Include="BooksList.aspx.cs">
       <DependentUpon>BooksList.aspx</DependentUpon>
