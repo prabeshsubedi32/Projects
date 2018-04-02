@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
+using DataAccessTier;
 
 namespace Lab1
 {
@@ -17,39 +18,36 @@ namespace Lab1
 
         protected void btnClick_Click(object sender, EventArgs e)
         {
-            SqlConnection cnn = new SqlConnection("Data Source=PRABESH-PC\\SQLEXPRESS;Initial Catalog=SM;Integrated Security=True");
-            SqlCommand cmd = new SqlCommand("select * from userInfo", cnn);
-            cnn.Open();
-            SqlDataReader rd = cmd.ExecuteReader();
-
-            while (rd.Read()){
-                if((txtUsername.Text == rd.GetString(1)) && (txtPassword.Text == rd.GetString(2))){
-                    string usertype = rd["UserType"].ToString();
+            UserDataAccess data = new UserDataAccess();
+            User user = new User();
+            if (data.getUsers().ToList().Where(x => (x.UserName == txtUsername.Text && x.Password == txtPassword.Text)).Any())
+            {
                     Response.Redirect("Home.aspx");
-                }
             }
-            errorMessage.Text = "Wrong UserName or Password";
-
+            else
+            {
+                errorMessage.Text = "Wrong UserName or Password";
+            }
         }
 
         protected void btnSignUp_Click(object sender, EventArgs e)
         {
-
-            SqlConnection cnn = new SqlConnection("Data Source=PRABESH-PC\\SQLEXPRESS;Initial Catalog=SM;Integrated Security=True");
-            SqlCommand cmd = new SqlCommand("select * from userInfo", cnn);
-            cnn.Open();
-            SqlDataReader rd = cmd.ExecuteReader();
-
-            while (rd.Read())
+            UserDataAccess data = new UserDataAccess();
+            User user = new User();
+            if (data.getUsers().ToList().Where(x => (x.UserName == txtUsername.Text && x.Password == txtPassword.Text)).Any())
             {
-                if ((txtUsername.Text == rd.GetString(1)) && (txtPassword.Text == rd.GetString(2)))
-                {
-                    string usertype = rd["UserType"].ToString();
-                        Response.Redirect("SignUp.aspx?usertype="+ usertype);
-                }
-            }
+                string usertype = data.getUsers().ToList()
+                    .Where(x => x.UserName == txtUsername.Text).ToList()
+                    .Select(xx => xx.UserType)
+                    .FirstOrDefault().ToString();
 
-            Response.Redirect("SignUp.aspx?usertype=-1");
+
+                Response.Redirect("SignUp.aspx?usertype=" + usertype);
+            }
+            else
+            {
+                Response.Redirect("SignUp.aspx?usertype=-1");
+            }                  
         }
     }
 }
