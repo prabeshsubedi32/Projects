@@ -11,8 +11,14 @@
         <div>
             <table>
                 <tr>
-                    <td colspan ="3">
+                    <td>Name of Book</td>
+                    <td colspan ="2">
                         <asp:TextBox ID="txtBooksName" runat="server"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td>Book ID</td>
+                    <td>
+                        <asp:TextBox ID="txtBookID" runat="server"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td>
@@ -23,6 +29,7 @@
             </table>
             <asp:Button ID="btnBooksList" runat="server" Text="Current List of Books" OnClick="btnBooksList_Click" />
         </div>
+        <asp:Label ID="errorText" runat="server" Text=""></asp:Label>
     </form>
 </body>
 </html>

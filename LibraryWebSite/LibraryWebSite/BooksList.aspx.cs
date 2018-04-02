@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using LibraryDataAccess;
 
 namespace LibraryWebSite
 {
@@ -12,13 +13,9 @@ namespace LibraryWebSite
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=PRABESH-PC\\SQLEXPRESS;Initial Catalog=LIBRARY;Integrated Security=True");
-            conn.Open();
-            SqlCommand cmd = new SqlCommand("ListBooks", conn);
-            SqlDataReader rd = cmd.ExecuteReader();
-            GridView1.DataSource = rd;
+            LibraryData data = new LibraryData();
+            GridView1.DataSource = data.getBookList();
             GridView1.DataBind();
-
         }
 
     }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LibraryDataAccess;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -22,16 +23,27 @@ namespace LibraryWebSite
 
         protected void btnAdd_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=PRABESH-PC\\SQLEXPRESS;Initial Catalog=LIBRARY;Integrated Security=True");
-            conn.Open();
-            SqlCommand cmd = new SqlCommand("", conn);
-            SqlDataReader rd = cmd.ExecuteReader();
+            LibraryData data = new LibraryData();
+            BookItems book = new BookItems();
 
+            book.BooksName = txtBooksName.Text;
+            book.Book_ID = Convert.ToInt32(txtBookID.Text);
+
+            data.AddBooks(book);
         }
 
         protected void btnRemove_Click(object sender, EventArgs e)
-        {
-
+        { 
+            LibraryData data = new LibraryData();
+            BookItems items = new BookItems();
+            if (data.getBookList().ToList().Where(x => x.Book_ID == Convert.ToInt32(txtBookID.Text)).Any())
+            {
+                data.RemoveBooks(Convert.ToInt32(txtBookID.Text));
+            }
+            else
+            {
+                errorText.Text = "Invalid Book_ID";
+            }
         }
     }
 }

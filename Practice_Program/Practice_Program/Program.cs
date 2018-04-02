@@ -10,9 +10,9 @@ public class Employee
     public string LastName;
     public string Email;
 
-    public void PrintFullName()
+    public virtual void PrintFullName()
     {
-        Console.WriteLine("Their name is {0}", FirstName +" "+ LastName);
+        Console.WriteLine("I am an Employee");
     }
 }
 
@@ -20,9 +20,9 @@ public class FullTimeEmployee : Employee
 {
     public int FullTimeSalary;
 
-    public void new PrintFullName()
+    public override void PrintFullName()
     {
-        Console.WriteLine("Their name is {0}", FirstName + " " + LastName +"consructor");
+        Console.WriteLine("I am FullTime");
     }
 
 }
@@ -30,6 +30,11 @@ public class FullTimeEmployee : Employee
 public class PartTimeEmployee : Employee
 {
     public int PartTimeSalary;
+
+    public override void PrintFullName()
+    {
+        Console.WriteLine("I am PartTime");
+    }
 }
 
 
@@ -38,9 +43,15 @@ class Program
 {
     static void Main(string[] args)
     {
-        FullTimeEmployee E1 = new FullTimeEmployee();
-        PartTimeEmployee E2 = new PartTimeEmployee();
-        E2.PartTimeSalary = 12;
+        Employee E1 = new Employee();
+        Employee E2 = new FullTimeEmployee();
+        Employee E3 = new PartTimeEmployee();
+        
+
+        E1.PrintFullName();
+        E2.PrintFullName();
+        E3.PrintFullName();
+        Console.ReadKey();
        
     }
 }

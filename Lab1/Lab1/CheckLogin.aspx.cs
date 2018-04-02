@@ -24,6 +24,7 @@ namespace Lab1
 
             while (rd.Read()){
                 if((txtUsername.Text == rd.GetString(1)) && (txtPassword.Text == rd.GetString(2))){
+                    string usertype = rd["UserType"].ToString();
                     Response.Redirect("Home.aspx");
                 }
             }
@@ -33,7 +34,22 @@ namespace Lab1
 
         protected void btnSignUp_Click(object sender, EventArgs e)
         {
-            Response.Redirect("SignUp.aspx");
+
+            SqlConnection cnn = new SqlConnection("Data Source=PRABESH-PC\\SQLEXPRESS;Initial Catalog=SM;Integrated Security=True");
+            SqlCommand cmd = new SqlCommand("select * from userInfo", cnn);
+            cnn.Open();
+            SqlDataReader rd = cmd.ExecuteReader();
+
+            while (rd.Read())
+            {
+                if ((txtUsername.Text == rd.GetString(1)) && (txtPassword.Text == rd.GetString(2)))
+                {
+                    string usertype = rd["UserType"].ToString();
+                        Response.Redirect("SignUp.aspx?usertype="+ usertype);
+                }
+            }
+
+            Response.Redirect("SignUp.aspx?usertype=-1");
         }
     }
 }

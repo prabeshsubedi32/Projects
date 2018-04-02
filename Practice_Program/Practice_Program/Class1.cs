@@ -11,7 +11,7 @@ namespace Practice_Program
         public void Main(String[] args)
         {
             overloading obj = new overloading();
-            Console.WriteLine(obj.add();
+            Console.WriteLine(obj.add(4,5));
 
         }
 

@@ -31,6 +31,15 @@ namespace LibraryWebSite {
         protected global::System.Web.UI.WebControls.TextBox txtBooksName;
         
         /// <summary>
+        /// txtBookID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtBookID;
+        
+        /// <summary>
         /// btnAdd control.
         /// </summary>
         /// <remarks>
@@ -56,5 +65,14 @@ namespace LibraryWebSite {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnBooksList;
+        
+        /// <summary>
+        /// errorText control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label errorText;
     }
 }
