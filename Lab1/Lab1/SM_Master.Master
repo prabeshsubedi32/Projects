@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SM_Master.master.cs" Inherits="Lab1.SM_Master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table>
+            <tr>
+                <td>
+                    <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Home</asp:LinkButton>
+
+                </td>
+                 <td>
+                    <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Product</asp:LinkButton>
+
+                </td>
+                 <td>
+                    <asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click">Sales</asp:LinkButton>
+
+                </td>
+                 <td>
+                    <asp:LinkButton ID="LinkButton4" runat="server" OnClick="LinkButton4_Click">Pucrchase</asp:LinkButton>
+
+                </td>
+            </tr>
+        </table>
+        <hr />
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

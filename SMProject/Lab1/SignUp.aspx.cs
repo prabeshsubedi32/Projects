@@ -24,6 +24,7 @@ namespace Lab1
                 ddlIds.DataBind();
                 ddlIds.Items.Insert(0, "Select");
                 //ddlIds.Items.Add(new ListItem("Select", "0", true));
+                var item = Request.QueryString[0].ToString();
                 if (Request.QueryString["usertype"].ToString() != "1")
                 {
                     btnUpdate.Visible = false;
@@ -55,6 +56,7 @@ namespace Lab1
             {
                 int selectedId = Convert.ToInt32(ddlIds.SelectedValue);
                 UserDataAccess data = new UserDataAccess();
+                var test = data.getUsers();
                 var user = data.getUsers().ToList().Select(x => new User()
                 {
                     Id = x.Id,
@@ -70,7 +72,6 @@ namespace Lab1
                 txtUserName.Text = user.UserName;
                 txtPassword.Text = user.Password;
                 rblUsrrType.SelectedValue = user.UserType.ToString();
-
             }
         }
 

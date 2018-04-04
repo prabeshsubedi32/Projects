@@ -50,10 +50,6 @@
     <Compile Include="GetDbConnection.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="ProductDataAccess.cs" />
-    <Compile Include="Purchase.cs" />
-    <Compile Include="PurchaseDataAccess.cs" />
-    <Compile Include="Stock.cs" />
-    <Compile Include="StockDataAccess.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserDataAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

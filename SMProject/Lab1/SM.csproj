@@ -69,8 +69,6 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Products.aspx" />
-    <Content Include="PurchasePage.aspx" />
-    <Content Include="SalesPage.aspx" />
     <Content Include="SM_Master.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -113,20 +111,6 @@
       <DependentUpon>Products.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PurchasePage.aspx.cs">
-      <DependentUpon>PurchasePage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PurchasePage.aspx.designer.cs">
-      <DependentUpon>PurchasePage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SalesPage.aspx.cs">
-      <DependentUpon>SalesPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SalesPage.aspx.designer.cs">
-      <DependentUpon>SalesPage.aspx</DependentUpon>
-    </Compile>
     <Compile Include="SignUp.aspx.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
