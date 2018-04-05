@@ -46,6 +46,11 @@
                <asp:textbox ID = "txtPrice"  runat="server"></asp:textbox>
            </td>
        </tr>
+        <tr>
+            <td>
+                <asp:Button ID="btnSales" runat="server" Text="Sale Product" OnClick="btnSales_Click" />
+            </td>
+        </tr>
    
    </table>
 

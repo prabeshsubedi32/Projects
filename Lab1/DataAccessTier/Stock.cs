@@ -13,5 +13,11 @@ namespace DataAccessTier
         public int StockQty { get; set; }
     }
 
+    public class ReportClass
+    {
+        public int ProductID { get; set; }
+        public string ProductName { get; set; }
+        public int StockQty { get; set; }
+    }
 }
 

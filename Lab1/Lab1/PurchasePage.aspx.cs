@@ -46,7 +46,7 @@ namespace Lab1
 
         protected void btnPurchase_Click(object sender, EventArgs e)
         {
-            int totalQty = 0;
+           
             ProductDataAccess data1 = new ProductDataAccess();
             PurchaseDataAccess data = new PurchaseDataAccess();
             StockDataAccess stockData = new StockDataAccess();
@@ -57,22 +57,6 @@ namespace Lab1
             items.PurchaseQty = Convert.ToInt32(txtQty.Text);
             items.PurchasePrice = Convert.ToInt32(txtPrice.Text);
             data.addPurchase(items);
-
-            if (data1.getProductID().ToList().Where(x => (x.ProductId == Convert.ToInt32(txtProductID.Text))).Any())
-            {
-                totalQty = (Convert.ToInt32(stockData.getStockQty().ToList()
-                    .Where(x => x.StockQty == Convert.ToInt32(txtQty.Text)).ToList()
-                    .Select(xx => Convert.ToInt32(xx.StockQty))
-                    .FirstOrDefault().ToString()) + (Convert.ToInt32(txtQty.Text)));
-            }
-            else
-            {
-                totalQty = Convert.ToInt32(txtQty.Text);
-            }
-
-            stockItems.ProductID = Convert.ToInt32(txtProductID.Text);
-            stockItems.StockQty = totalQty;
-            stockData.addStock(stockItems);
             Response.Redirect("PurchasePage.aspx");
             
 

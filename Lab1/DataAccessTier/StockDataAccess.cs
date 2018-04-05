@@ -21,18 +21,21 @@ namespace DataAccessTier
             cmd.ExecuteNonQuery();
         }
 
-        public List<Stock> getStockQty()
+        public List<ReportClass> getStock()
         {
-            List<Stock> listQty = new List<Stock>();
+            List<ReportClass> listQty = new List<ReportClass>();
             SqlConnection conn = new SqlConnection(GetDbConnection.Connecton());
             conn.Open();
-            SqlCommand cmd = new SqlCommand("GetQty", conn);
+            SqlCommand cmd = new SqlCommand("GetStock", conn);
             SqlDataReader rd = cmd.ExecuteReader();
             while (rd.Read())
             {
-                listQty.Add(new Stock()
+                listQty.Add(new ReportClass()
                 {
-                    StockQty= Convert.ToInt32(rd["Qty"])
+                    ProductID= Convert.ToInt32(rd["P_ID"]),
+                    StockQty = Convert.ToInt32(rd["TotalQtry"]),
+                    ProductName = rd["productName"].ToString()
+                   
                 });
 
             }

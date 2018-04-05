@@ -52,6 +52,8 @@
     <Compile Include="ProductDataAccess.cs" />
     <Compile Include="Purchase.cs" />
     <Compile Include="PurchaseDataAccess.cs" />
+    <Compile Include="Sales.cs" />
+    <Compile Include="SalesDataAccess.cs" />
     <Compile Include="Stock.cs" />
     <Compile Include="StockDataAccess.cs" />
     <Compile Include="User.cs" />

@@ -44,5 +44,17 @@ namespace Lab1
                 txtProductDes.Text = product.ProductDesc;
             }
         }
+
+        protected void btnSales_Click(object sender, EventArgs e)
+        {
+            SalesDataAccess data = new SalesDataAccess();
+            Sales items = new Sales();
+            items.ProductID = Convert.ToInt32(txtProductID.Text);
+            items.SalesQty = Convert.ToInt32(txtQty.Text);
+            items.SalesPrice = Convert.ToInt32(txtPrice.Text);
+            data.addSales(items);
+
+
+        }
     }
 }

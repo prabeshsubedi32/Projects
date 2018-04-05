@@ -33,5 +33,10 @@ namespace Lab1
         {
             Response.Redirect("PurchasePage.aspx");
         }
+
+        protected void LinkButton5_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ReportPage.aspx");
+        }
     }
 }

@@ -28,6 +28,9 @@
                     <asp:LinkButton ID="LinkButton4" runat="server" OnClick="LinkButton4_Click">Pucrchase</asp:LinkButton>
 
                 </td>
+                <td>
+                    <asp:LinkButton ID="LinkButton5" runat="server" OnClick="LinkButton5_Click">Stock Details</asp:LinkButton>
+                </td>
             </tr>
         </table>
         <hr />

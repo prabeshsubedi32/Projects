@@ -70,6 +70,7 @@
     <None Include="packages.config" />
     <Content Include="Products.aspx" />
     <Content Include="PurchasePage.aspx" />
+    <Content Include="ReportPage.aspx" />
     <Content Include="SalesPage.aspx" />
     <Content Include="SM_Master.Master" />
     <None Include="Web.Debug.config">
@@ -119,6 +120,13 @@
     </Compile>
     <Compile Include="PurchasePage.aspx.designer.cs">
       <DependentUpon>PurchasePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPage.aspx.cs">
+      <DependentUpon>ReportPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportPage.aspx.designer.cs">
+      <DependentUpon>ReportPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="SalesPage.aspx.cs">
       <DependentUpon>SalesPage.aspx</DependentUpon>
