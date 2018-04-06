@@ -12,10 +12,13 @@ namespace Lab1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-             StockDataAccess data = new StockDataAccess();
+            if (Session["UserName"] == null)
+            {
+                Response.Redirect("CheckLogin.aspx?returnurl=ReportPage.aspx");
+            }
+            StockDataAccess data = new StockDataAccess();
             GridView1.DataSource = data.getStock();
             GridView1.DataBind();
-            
 
         }
     }

@@ -94,8 +94,8 @@ namespace Lab1
 
         protected void btnDelete_Click(object sender, EventArgs e)
         {
-            UserDataAccess data1 = new UserDataAccess();
-            data1.DeleteUser(Convert.ToInt32(ddlIds.SelectedValue));
+            UserDataAccess data = new UserDataAccess();
+            data.DeleteUser(Convert.ToInt32(ddlIds.SelectedValue));
         }
     }
 }

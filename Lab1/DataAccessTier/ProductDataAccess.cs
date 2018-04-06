@@ -23,7 +23,7 @@ namespace DataAccessTier
                 {
                     ProductId = Convert.ToInt32(rd["P_ID"].ToString()),
                     ProductName = rd["productName"].ToString(),
-                    ProductDesc = rd["p_Description"].ToString(),
+                    ProductDesc = rd["P_Description"].ToString(),
                     ProductType = rd["P_Type"].ToString()
                 });
             }
@@ -81,6 +81,8 @@ namespace DataAccessTier
             conn.Open();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@id", SqlDbType.Int).Value = id;
+
+            cmd.ExecuteNonQuery();
         }
     }
 

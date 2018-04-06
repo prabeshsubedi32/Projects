@@ -68,6 +68,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="css\sm.css" />
+    <Content Include="js\validation.js" />
     <Content Include="Products.aspx" />
     <Content Include="PurchasePage.aspx" />
     <Content Include="ReportPage.aspx" />

@@ -22,7 +22,18 @@ namespace Lab1
             User user = new User();
             if (data.getUsers().ToList().Where(x => (x.UserName == txtUsername.Text && x.Password == txtPassword.Text)).Any())
             {
+                Session["UserName"] = data.getUsers().ToList()
+                   .Where(x => x.UserName == txtUsername.Text).ToList()
+                   .Select(xx => xx.UserName)
+                   .FirstOrDefault().ToString();
+                if (Request.QueryString["returnurl"] != null)
+                {
+                    Response.Redirect(Request.QueryString["returnurl"].ToString());
+                }
+                else
+                {
                     Response.Redirect("Home.aspx");
+                }
             }
             else
             {
@@ -41,6 +52,10 @@ namespace Lab1
                     .Select(xx => xx.UserType)
                     .FirstOrDefault().ToString();
 
+                Session["UserName"]= data.getUsers().ToList()
+                    .Where(x => x.UserName == txtUsername.Text).ToList()
+                    .Select(xx => xx.UserName)
+                    .FirstOrDefault().ToString();
 
                 Response.Redirect("SignUp.aspx?usertype=" + usertype);
             }

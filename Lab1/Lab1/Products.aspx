@@ -17,7 +17,10 @@
         <tr>
             <td>Product ID</td>
             <td>
-                <asp:TextBox ID="txtProductId" runat="server"></asp:TextBox></td>
+                <asp:TextBox ID="txtProductId" runat="server"></asp:TextBox>
+                <asp:RangeValidator ID="RangeValidator1" ControlToValidate="txtProductId" Type="Integer" MaximumValue="9999" MinimumValue="1000" runat="server" ErrorMessage="<span class='ErrorMsg'>Please enter product id beween 1000 to 9999</span>"></asp:RangeValidator>
+
+            </td>
         </tr>
         <tr>
             <td>Product Name </td>

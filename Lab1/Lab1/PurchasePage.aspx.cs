@@ -12,6 +12,10 @@ namespace Lab1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["UserName"] == null)
+            {
+                Response.Redirect("CheckLogin.aspx?returnurl=PurchasePage.aspx");
+            }
             if (!IsPostBack)
             {
                 ProductDataAccess data = new ProductDataAccess();

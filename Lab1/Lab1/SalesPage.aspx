@@ -39,12 +39,17 @@
            <td>
                <asp:textbox ID = "txtQty"  runat="server"></asp:textbox>
            </td>
+           <td> Quantity Available </td>
+           <td>
+               <asp:TextBox ID="txtTotalQty" runat="server"></asp:TextBox></td>
        </tr>
        <tr>
            <td>Product Price</td>
            <td>
                <asp:textbox ID = "txtPrice"  runat="server"></asp:textbox>
            </td>
+           <td>
+               <asp:Label ID="lblStock" runat="server" Text=""></asp:Label></td>
        </tr>
         <tr>
             <td>
