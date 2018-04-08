@@ -1,8 +1,51 @@
 ﻿body {
+    width:900px;
+    height:1200px;
 }
 
 .ErrorMsg
 {
   color:red;
  
+}
+
+
+#header {
+    width: 900px;
+    height: 150px;
+    background-color:aquamarine;
+}
+#menu {
+    width: 900px;
+    height: 25px;
+    background-color: purple;
+}
+
+#footer {
+    width: 900px;
+    height: 100px;
+    background-color: yellow;
+    display:block;
+}
+
+#menu-left {
+    width: 100px;
+    height: 925px;
+    background-color: red;
+    float:left;
+}
+
+#menu-right {
+    width: 100px;
+    height: 925px;
+    background-color: forestgreen;
+    float:right;
+}
+
+#content-area {
+    width: 700px;
+    height: 925px;
+    background-color: blue;
+    
+    float: left;
 }

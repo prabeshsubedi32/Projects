@@ -4,40 +4,58 @@
 
 <html>
 <head runat="server">
+    <link href="css/sm.css" rel="stylesheet" />
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-        <table>
-            <tr>
-                <td>
-                    <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Home</asp:LinkButton>
+        <div id="header"></div>
+        <div id="menu">
+            <table>
+                <tr>
+                    <td>
+                        <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Home</asp:LinkButton>
 
-                </td>
-                 <td>
-                    <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Product</asp:LinkButton>
+                    </td>
+                    <td>
+                        <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Product</asp:LinkButton>
 
-                </td>
-                 <td>
-                    <asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click">Sales</asp:LinkButton>
+                    </td>
+                    <td>
+                        <asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click">Sales</asp:LinkButton>
 
-                </td>
-                 <td>
-                    <asp:LinkButton ID="LinkButton4" runat="server" OnClick="LinkButton4_Click">Pucrchase</asp:LinkButton>
+                    </td>
+                    <td>
+                        <asp:LinkButton ID="LinkButton4" runat="server" OnClick="LinkButton4_Click">Pucrchase</asp:LinkButton>
 
-                </td>
-                <td>
-                    <asp:LinkButton ID="LinkButton5" runat="server" OnClick="LinkButton5_Click">Stock Details</asp:LinkButton>
-                </td>
-            </tr>
-        </table>
-        <hr />
-        <div>
+                    </td>
+                    <td>
+                        <asp:LinkButton ID="LinkButton5" runat="server" OnClick="LinkButton5_Click">Stock Details</asp:LinkButton>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="menu-left">
+            <br />
+            <a href="#">Menu1</a><br />
+            <a href="#">Menu2</a><br />
+
+            <a href="#">Menu3</a>
+        </div>
+        <div id="content-area">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
+        <div id="menu-right">
+            <br />
+            <a href="#">Menu1</a><br />
+            <a href="#">Menu2</a><br />
+
+            <a href="#">Menu3</a>
+        </div>
+        <div id="footer"></div>
     </form>
 </body>
 </html>
