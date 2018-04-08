@@ -11,7 +11,10 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div id="header"></div>
+        <div id="header">
+            <asp:LinkButton align="left" ID="LinkButton6" runat="server" OnClick="LinkButton6_Click">LogIn</asp:LinkButton>
+            <asp:LinkButton ID="LinkButton7" runat="server" OnClick="LinkButton7_Click">LogOut</asp:LinkButton>
+        </div>
         <div id="menu">
             <table>
                 <tr>
@@ -55,7 +58,8 @@
 
             <a href="#">Menu3</a>
         </div>
-        <div id="footer"></div>
+        <div id="footer">
+        </div>
     </form>
 </body>
 </html>

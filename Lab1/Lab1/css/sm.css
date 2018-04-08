@@ -12,24 +12,24 @@
 
 #header {
     width: 900px;
-    height: 150px;
+    height: 50px;
     background-color:aquamarine;
 }
 #menu {
     width: 900px;
-    height: 25px;
+    height: 40px;
     background-color: purple;
 }
 
 #footer {
     width: 900px;
     height: 100px;
-    background-color: yellow;
-    display:block;
+    background-color: darkslateblue;
+    overflow:hidden;
 }
 
 #menu-left {
-    width: 100px;
+    width:100px ;
     height: 925px;
     background-color: red;
     float:left;
@@ -46,6 +46,5 @@
     width: 700px;
     height: 925px;
     background-color: blue;
-    
     float: left;
 }

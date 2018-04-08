@@ -11,6 +11,16 @@ namespace Lab1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["UserName"] == null)
+            {
+                LinkButton7.Visible = false;
+            }
+            else
+            {
+                LinkButton6.Visible = false;
+            }
+
+            
 
         }
 
@@ -37,6 +47,17 @@ namespace Lab1
         protected void LinkButton5_Click(object sender, EventArgs e)
         {
             Response.Redirect("ReportPage.aspx");
+        }
+
+        protected void LinkButton6_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CheckLogin.aspx");
+        }
+
+        protected void LinkButton7_Click(object sender, EventArgs e)
+        {
+            Session["UserName"] = null;
+            Response.Redirect("Home.aspx");
         }
     }
 }

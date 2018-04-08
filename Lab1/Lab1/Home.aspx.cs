@@ -13,9 +13,10 @@ namespace Lab1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            UserDataAccess data = new UserDataAccess();
-            GridView1.DataSource = data.getUsers();
-            GridView1.DataBind();
+
+            //UserDataAccess data = new UserDataAccess();
+            //GridView1.DataSource = data.getUsers();
+            //GridView1.DataBind();
         }
     }
 }

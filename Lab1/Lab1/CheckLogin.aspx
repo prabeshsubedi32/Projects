@@ -22,11 +22,10 @@
                 <td>
                     <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
                     <asp:RequiredFieldValidator ControlToValidate="txtPassword" ID="RequiredFieldValidator2" runat="server" ErrorMessage="<span class='ErrorMsg'>*</span>"></asp:RequiredFieldValidator>
-
                 </td>
             </tr>
             <tr>
-                <td><asp:Button ID="btnClick" OnClientClick="validateUserInput();" OnClick="btnClick_Click" runat="server" Text="SignIn" /></td>
+                <td><asp:Button ID="btnLogin" OnClick="btnLogin_Click" runat="server" Text="SignIn" /></td>
                 <td><asp:Button ID="btnSignUp" runat="server" CausesValidation="false" Text="SignUp" OnClick="btnSignUp_Click" /></td>
             </tr>
         </table>
@@ -42,7 +41,6 @@
                 alert("Enter User Name");
                 return false;
             }--%>
-
 }
 
     </script>

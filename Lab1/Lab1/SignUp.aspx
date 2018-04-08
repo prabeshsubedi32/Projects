@@ -59,7 +59,7 @@
             </tr>
 
             <tr>
-                <td colspan="2"><asp:Button ID="btnSignUp" CausesValidation="" runat="server" Text="SignUp" OnClick="btnSignUp_Click" />
+                <td colspan="2"><asp:Button ID="btnSignUp"  runat="server" Text="SignUp" OnClick="btnSignUp_Click" />
                     <asp:Button ID="btnUpdate" runat="server" Text="Update" OnClick="btnUpdate_Click" />
 <asp:Button ID="btnDelete" runat="server" Text="Delete" OnClick="btnDelete_Click" />
                 </td>
