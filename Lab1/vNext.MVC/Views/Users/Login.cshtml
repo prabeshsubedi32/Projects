@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+<form action="Validate" method="post">
+    <h1>
+        @{
+            @ViewBag.Message
+        }
+    </h1>
+    <table>
+        <tr>
+            <td>User Name</td>
+            <td><input type="text" name="txtusername" value="" /></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="text" name="txtuserpassword" value="" /></td>
+        </tr>
+        <tr>
+            
+            <td col2><input type="submit" name="sumit" value="Login" /></td>
+        </tr>
+    </table>
+</form>
+
