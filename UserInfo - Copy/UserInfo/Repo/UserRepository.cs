@@ -11,7 +11,7 @@ namespace UserInfo.Repo
         public List<User> GetUsers()
         {
             UserContext contxt = new UserContext();
-           return  contxt.userData.ToList();
+            return  contxt.userData.ToList();
         }
 
         public User GetUsers(int Id)
@@ -22,6 +22,10 @@ namespace UserInfo.Repo
 
         public void Remove(int id)
         {
+            UserContext context = new UserContext();
+            User users = context.userData.Find(id);
+            context.userData.Remove(users);
+
             //throw new NotImplementedException();
         }
 
